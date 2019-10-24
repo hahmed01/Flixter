@@ -1,6 +1,7 @@
 package com.example.flixter.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,8 +12,11 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.flixter.DetailActivity;
 import com.example.flixter.R;
 import com.example.flixter.models.Movie;
+
+import org.parceler.Parcels;
 
 import java.util.List;
 
@@ -63,10 +67,23 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
             ivPoster = itemView.findViewById(R.id.ivPoster);
         }
 
-        public void bind(Movie movie){
+        public void bind(final Movie movie){
             tvTitle.setText(movie.getTitle());
             tvOverview.setText(movie.getOverview());
             Glide.with(context).load(movie.getPosterPath()).into(ivPoster);
+
+            //Register click listener on whole row
+            tvTitle.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v){
+                    //Toast.makeText(context, "", Toast.LENGTH_SHORT).show();
+                    //Navigate to new activity when clicked
+                    Intent i = new Intent(context, DetailActivity.class);
+                    //i.putExtra("title", movie.getTitle());
+                    i.putExtra("movie", Parcels.wrap("movie"));
+                    context.startActivity(i);
+                }
+            });
         }
     }
 }
