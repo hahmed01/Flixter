@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="#000000">
 
     <ImageView
         android:id="@+id/ivPoster"
@@ -12,8 +13,9 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="3dp"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
@@ -22,7 +24,8 @@
         android:layout_height="wrap_content"
         android:layout_toEndOf="@+id/ivPoster"
         android:text="El Camino"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:textColor="#ffffff"/>
 
     <TextView
         android:id="@+id/tvOverview"
@@ -37,7 +40,7 @@
         android:ellipsize="end"
         android:maxLines="7"
         android:text="TextView"
-        android:textColor="@android:color/black"
+        android:textColor="#808080"
         tools:text="In the near future, a weary Logan cares for an ailing Professor X in a hide out on the Mexican border. But Logan's attempts to hide from the world and his legacy are up-ended when a young mutant arrives, being pursued by dark forces." />/>
 
 </RelativeLayout>

@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".DetailActivity"
     android:orientation="vertical"
+    android:background="#000000"
     >
 
     <com.google.android.youtube.player.YouTubePlayerView
@@ -19,7 +20,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Joker"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        android:textColor="#ffffff"/>
 
     <RatingBar
         android:id="@+id/ratingBar"
@@ -34,5 +36,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="TextView"
-        tools:text="Lorem ipsum" />
+        tools:text="Lorem ipsum"
+        android:textColor="#808080"/>
 </LinearLayout>
