@@ -28,6 +28,8 @@ Time spent: 10 hours (5 hours part 1, 5 hours part 2)
 
 <img src="walkthrough2.gif" width=250><br>
 
+<img src="walkthrough3.gif" width=250><br>
+
 ### Notes
 
 Describe any challenges encountered while building the app.
