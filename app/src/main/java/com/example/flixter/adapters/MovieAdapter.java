@@ -80,7 +80,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
                     //Navigate to new activity when clicked
                     Intent i = new Intent(context, DetailActivity.class);
                     //i.putExtra("title", movie.getTitle());
-                    i.putExtra("movie", Parcels.wrap("movie"));
+                    i.putExtra("movie", Parcels.wrap(movie));
                     context.startActivity(i);
                 }
             });
